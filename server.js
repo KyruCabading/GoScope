@@ -13,12 +13,12 @@ app.prepare()
   .then(() => {
     const server = express()
 
-    server.get('/scope/map', (req, res) => {
+    server.get('/scope', (req, res) => {
       const { key, fullscreen } = req.query
       const keyIsValid = APPROVED_KEYS.indexOf(key) !== -1// Accepts partial matches. Need to fix
 
       if (keyIsValid) {
-        const actualPage = '/map'
+        const actualPage = '/scope'
         const queryParams = { key, fullscreen }
         app.render(req, res, actualPage, queryParams)
       } else {
