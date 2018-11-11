@@ -1,7 +1,10 @@
 require('dotenv').config()
 const express = require('express')
 const next = require('next')
+const config = require('./next.config')
 
+// TODO: Fix unsafe env vars
+const APPROVED_KEYS = config.serverRuntimeConfig.APPROVED_APIKEYS || []
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
@@ -12,7 +15,7 @@ app.prepare()
 
     server.get('/scope/map', (req, res) => {
       const { key, fullscreen } = req.query
-      const keyIsValid = process.env.APPROVED_APIKEYS.includes(key) // Accepts partial matches. Need to fix
+      const keyIsValid = APPROVED_KEYS.indexOf(key) !== -1// Accepts partial matches. Need to fix
 
       if (keyIsValid) {
         const actualPage = '/map'
