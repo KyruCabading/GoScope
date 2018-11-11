@@ -1,10 +1,10 @@
 import { withRouter } from 'next/router'
-import Layout from '../components/Layout.js'
+import Page from '../components/Page.js'
 import Map from '../components/Map'
 
 export default (props) => (
-  <Layout fullscreen={props.url.query.fullscreen}>
-    <h1>{props.url.query.key}</h1>
+  <Page fullscreen={true}>
+    <h1>{'AIzaSyCRuw5iFyahVf698zP0xpknHj0V86FqI2M'}</h1>
     <p>Render Map below</p>
     <Map
       id="myMap"
@@ -20,5 +20,5 @@ export default (props) => (
         });
       }}
     />
-  </Layout>
+  </Page>
 )
