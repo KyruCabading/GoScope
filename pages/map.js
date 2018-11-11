@@ -4,8 +4,6 @@ import Map from '../components/Map'
 
 export default (props) => (
   <Page fullscreen={true}>
-    <h1>{'AIzaSyCRuw5iFyahVf698zP0xpknHj0V86FqI2M'}</h1>
-    <p>Render Map below</p>
     <Map
       id="myMap"
       options={{
