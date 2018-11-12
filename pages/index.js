@@ -4,11 +4,16 @@ export default () => (
   <Page fullscreen={true}>
     <div className="main">
       <h1>GoScope</h1>
-      <p>Please visit "goscope.sh.now/scope/map?key=Insert-your-key-here" to start scoping.</p>
+      <p>
+        Please visit <br />
+        "goscope.sh.now/scope?key=ProductKey" <br />
+        to start scoping. <br />
+      </p>
     </div>
     <style jsx>{`
       .main {
       display: flex;
+      padding: 0 10vw 0 10vw;
       text-align: center;
       background-color: #282c34;
       min-height: 100vh;
