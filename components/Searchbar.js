@@ -16,7 +16,7 @@ export default (props) => (
         box-sizing: border-box;
         -moz-box-sizing: border-box;
         outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
         background-color: #fff;
         font-family: Roboto;
       }
@@ -33,14 +33,13 @@ export default (props) => (
       
       .pac-controls label {
         font-family: Roboto;
-        font-size: 13px;
+        font-size: 16px;
         font-weight: 300;
       }
       
       #pac-input {
         font-family: Roboto;
-        font-color: 
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 300;
         margin: 1vh;
         padding: 15px;
@@ -48,6 +47,9 @@ export default (props) => (
         width: 80vw;
         border: none;
         border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
       }
       
       #pac-input:focus {
@@ -55,4 +57,5 @@ export default (props) => (
       }
     `}</style>
   </div>
+
 )
