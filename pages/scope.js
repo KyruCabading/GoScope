@@ -2,13 +2,13 @@ import React from 'react'
 import { withRouter } from 'next/router'
 import Page from '../components/Page.js'
 import Map from '../components/Map'
+import Searchbar from '../components/Searchbar'
 
 class Scope extends React.Component {
 
   setupMap = map => {
-    console.log("RAN")
-    // Initialize infowindow
     var infowindow;
+
     // Create the search box and link it to the UI element.
     var input = document.getElementById('pac-input');
     var searchBox = new google.maps.places.SearchBox(input);
@@ -57,7 +57,7 @@ class Scope extends React.Component {
       map.fitBounds(bounds);
 
 
-      // Start Code here
+      // Mapping Educational Facilities
       var coordinate = map.getCenter()
       infowindow = new google.maps.InfoWindow();
       var service = new google.maps.places.PlacesService(map);
@@ -77,7 +77,7 @@ class Scope extends React.Component {
         }, callback);
       })
 
-      // Callback
+      // Create a market for each result
       function callback(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
           for (var i = 0; i < results.length; i++) {
@@ -124,7 +124,7 @@ class Scope extends React.Component {
 
     return (
       <Page fullscreen={isFullscreen}>
-        <input id="pac-input" className="controls" type="text" placeholder="Search" />
+        <Searchbar id="pac-input" className="controls" type="text" placeholder="Search" />
         <Map
           id="myMap"
           options={mapOptions}
@@ -132,49 +132,6 @@ class Scope extends React.Component {
             this.setupMap(map)
           }}
         />
-        <style jsx>{`
-        .pac-card {
-          margin: 10px 10px 0 0;
-          border-radius: 2px 0 0 2px;
-          box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          outline: none;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-          background-color: #fff;
-          font-family: Roboto;
-        }
-        
-        #pac-container {
-          padding-bottom: 12px;
-          margin-right: 12px;
-        }
-        
-        .pac-controls {
-          display: inline-block;
-          padding: 5px 11px;
-        }
-        
-        .pac-controls label {
-          font-family: Roboto;
-          font-size: 13px;
-          font-weight: 300;
-        }
-        
-        #pac-input {
-          background-color: #fff;
-          font-family: Roboto;
-          font-size: 15px;
-          font-weight: 300;
-          margin: 1vh;
-          padding: 15px;
-          text-overflow: ellipsis;
-          width: 80vw;
-        }
-        
-        #pac-input:focus {
-          border-color: #4d90fe;
-        }
-        `}</style>
       </Page>
     )
   }
