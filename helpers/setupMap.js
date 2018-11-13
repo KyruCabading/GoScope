@@ -118,6 +118,7 @@ const setupMap = map => {
 
 
     }
+    document.getElementById('pac-input').value = ''
   });
 }
 
