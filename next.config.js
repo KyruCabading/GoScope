@@ -12,7 +12,7 @@ module.exports = {
     // Search threshold from main point
     placesChanged: 'places_changed',
     boundsChanged: 'bounds_changed',
-    threshold: 1500,
+    threshold: 100,
     // Radius from each marker
     radius: 100,
     // Map style
