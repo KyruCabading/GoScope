@@ -23,7 +23,7 @@ class Scope extends React.Component {
 
     return (
       <Page fullscreen={isFullscreen}>
-        <Searchbar id="pac-input" className="controls" type="search" placeholder="Search..." results={5} />
+        <Searchbar id="pac-input" className="controls" type="text" placeholder="Search..." results={5} />
         <Map
           id="myMap"
           options={mapOptions}

@@ -41,13 +41,14 @@ export default (props) => (
         font-family: Roboto;
         font-size: 16px;
         font-weight: 300;
-        margin: 1vh;
+        margin-top: 2vh;
         padding: 15px;
         text-overflow: ellipsis;
         width: 80vw;
         border: none;
         border-radius: 5px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        -webkit-appearance: none;
         -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
       }
