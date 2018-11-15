@@ -1,14 +1,8 @@
 export default (props) => (
-  <div className="container">
+  <div>
     {/* <span class="icon"><i class="fa fa-search"></i></span> */}
     <input type={props.type} id={props.id} placeholder={props.placeholder} className={props.className} />
     <style jsx>{`
-      .container{
-        display: none;
-        vertical-align: middle;
-        white-space: nowrap;
-        position: relative;
-      }
       .pac-card {
         margin: 10px 10px 0 0;
         border-radius: 2px 0 0 2px;
@@ -43,7 +37,7 @@ export default (props) => (
         margin-top: 2vh;
         padding: 15px;
         text-overflow: ellipsis;
-        width: 80vw;
+        width: 60vw;
         border: none;
         border-radius: 5px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
@@ -57,5 +51,4 @@ export default (props) => (
       }
     `}</style>
   </div>
-
 )
