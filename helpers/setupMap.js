@@ -6,7 +6,9 @@ const {
   radius,
   threshold,
   placesChanged,
-  boundsChanged
+  boundsChanged,
+  color,
+  fillOpacity
 } = publicRuntimeConfig
 
 const setupMap = map => {
@@ -80,7 +82,7 @@ const setupMap = map => {
       }, callback);
     })
 
-    // Create a market for each result
+    // Create a marker for each result
     function callback(results, status) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
@@ -99,7 +101,9 @@ const setupMap = map => {
       var circle = {
         map: map,
         radius,
-        fillColor: '#AA0000',
+        fillColor: color,
+        fillOpacity,
+        strokeColor: color,
         strokeWeight: 0
       }
 

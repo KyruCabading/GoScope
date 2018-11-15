@@ -6,13 +6,15 @@ module.exports = {
     GOOGLEMAPS_APIKEY: 'AIzaSyCRuw5iFyahVf698zP0xpknHj0V86FqI2M', // JTI Product Key
     center: { lat: 14.5627, lng: 121.0334 },
     // Used to map over keywords when searching
-    configNames: ["academy", "tutorial", "kumon", "highschool", "elementary", "college", "university", "Academy", "Tutorial", "Kumon", "Highschool", "Elementary", "College", "University"],
+    configNames: ["academy", "tutorial", "kumon", "highschool", "elementary", "college", "university"],
     // Places API main type
     configNameMain: ["school"],
     // Search threshold from main point
+    threshold: 120,
     placesChanged: 'places_changed',
     boundsChanged: 'bounds_changed',
-    threshold: 100,
+    color: '#AA0000',
+    fillOpacity: 0.20,
     // Radius from each marker
     radius: 100,
     // Map style
