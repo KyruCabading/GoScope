@@ -18,7 +18,7 @@ app.prepare()
       const keyIsValid = APPROVED_KEYS.indexOf(key) !== -1// Accepts partial matches. Need to fix
 
       if (keyIsValid) {
-        const actualPage = '/main'
+        const actualPage = '/scope'
         const queryParams = { key, fullscreen }
         app.render(req, res, actualPage, queryParams)
       } else {
