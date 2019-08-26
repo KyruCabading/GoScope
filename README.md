@@ -1,4 +1,5 @@
 # GoScope
+
 A tool that monitors all schools/educational facilities within a location
 
 
