@@ -2,6 +2,7 @@ import React from 'react'
 import Router from 'next/router'
 import Page from '../components/Page.js'
 import TextInput from '../components/TextInput';
+import Button from '../components/Button';
 
 class Index extends React.Component {
   constructor(props) {
@@ -12,14 +13,18 @@ class Index extends React.Component {
     }
   }
 
-  onInputKeyPress = event => {
+  onInputChange = event => {
+    this.setState({ productKeyValue: event.target.value })
+  }
+
+  onKeyPress = event => {
     if (event.key === "Enter") {
-      Router.push(`/scope?key=${this.state.productKeyValue}&fullscreen=true`)
+      this.handleRedirect(this.state.productKeyValue)
     }
   }
 
-  onInputChange = event => {
-    this.setState({ productKeyValue: event.target.value })
+  handleRedirect = key => {
+    Router.push(`/scope?key=${key}&fullscreen=true`)
   }
 
   render() {
@@ -32,12 +37,15 @@ class Index extends React.Component {
           </p>
           <TextInput
             id="productkey-input"
-            type="search"
             placeholder="Product Key..."
-            onKeyPress={this.onInputKeyPress}
+            onKeyPress={this.onKeyPress}
             onChange={this.onInputChange}
             value={this.state.productKeyValue}
           />
+          <p style={{ marginTop: 50, fontSize: 14 }}>
+            Don't have a product key?
+          </p>
+          <Button onClick={() => this.handleRedirect('janababy')}>Try GoScope</Button>
         </div>
         <style jsx>{`
           .main {

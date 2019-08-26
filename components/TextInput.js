@@ -1,24 +1,18 @@
 export default (props) => (
   <div>
-    {/* <span class="icon"><i class="fa fa-search"></i></span> */}
     <input
-      type={props.type}
-      id={props.id}
-      placeholder={props.placeholder}
       className="text-input"
-      onKeyPress={props.onKeyPress}
-      onChange={props.onChange}
-      value={props.value}
+      {...props}
     />
     <style jsx>{`   
       .text-input {
-        font-family: Roboto;
+        font-family: Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
         font-size: 16px;
         font-weight: 300;
         margin-top: 2vh;
         padding: 15px;
         text-overflow: ellipsis;
-        width: 50vw;
+        width: 60vw;
         border: none;
         border-radius: 5px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
