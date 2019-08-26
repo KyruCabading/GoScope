@@ -1,4 +1,5 @@
 # GoScope
+<img width="502" alt="Screen Shot 2019-08-25 at 9 44 09 PM" src="https://user-images.githubusercontent.com/31245853/63665896-31ff4680-c782-11e9-8cac-e05958b62b22.png">
 
 A tool that monitors all schools/educational facilities within a location
 
