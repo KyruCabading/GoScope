@@ -14,8 +14,8 @@
   },
   "scripts": {
     "dev": "node server.js",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "build": "next build && next export",
+    "start": "serve ./out"
   },
   "devDependencies": {
     "dotenv": "^6.1.0"
